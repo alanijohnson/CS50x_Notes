@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/note_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top"
+    android:clickable="false"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/favorite_imageView"
+                android:paddingRight="4dp"
+                android:alpha="1"
+                android:layout_weight="3"
+                android:src="@drawable/ic_baseline_favorite_24"
+                android:visibility="visible"
+                app:tint="@color/favoriteSwipeColor" />
+            <TextView
+                android:id="@+id/note_row_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxHeight="100dp"
+                android:maxLines="1"
+                android:padding="1dp"
+                android:text="What happens if my title runs into the other text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/note_row_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="center|end"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="12/25/2020\n11:54am"
+                app:autoSizeTextType="uniform"
+                android:textSize="13dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/note_row_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:maxLines="2"
+            android:minLines="2"
+            android:padding="2dp"
+            android:text="This is an example description to I need to make a really long description to test padding"
+            android:textSize="14dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="3dp"
+            android:background="@android:color/darker_gray" />
+    </LinearLayout>
+</LinearLayout>
